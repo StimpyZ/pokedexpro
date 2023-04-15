@@ -9,6 +9,8 @@ import pokeNotFound from '../assets/pokeNotFound.png'
 import SearchbarPokemon from '../components/SearchBar'
 import Loading from '../components/Loading'
 import FooterStimp from '../components/footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 export const HomePage = () => {
   const [pokemons, setPokemons] = useState([])
@@ -72,6 +74,9 @@ export const HomePage = () => {
               total={total}
             />
             )}
+      <button className='goUp' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <FontAwesomeIcon icon={faArrowUp} />
+      </button>
       <FooterStimp />
     </div>
   )

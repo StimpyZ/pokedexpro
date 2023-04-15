@@ -119,10 +119,10 @@ export const PokemonPage = () => {
               <h2 style={getColorType()}>BASE STATS</h2>
               <PokemonStats stats={pokemon.stats} type={pokemon.types[0].type.name} />
               <h2 style={getColorType()}>WEAKNESS</h2>
-              {weakness.map((type, key) => {
-                return (
-                  <div key={key} className='weakness-container'>
-                    <div className='poke-type-detail1'>
+              <div className='flex-weak'>
+                {weakness.map((type, key) => {
+                  return (
+                    <div key={key} className='poke-type-detail1'>
                       {type.damage_relations.double_damage_from.map((type) => {
                         const typeColor = getTypeColor(type.name)
                         return (
@@ -135,9 +135,10 @@ export const PokemonPage = () => {
                         )
                       })}
                     </div>
-                  </div>
-                )
-              })}
+
+                  )
+                })}
+              </div>
             </div>
           </div>
           )}

@@ -1,5 +1,5 @@
 import './css/pokedex.css'
-import Pagination from './pagination'
+import Pagination from './Pagination'
 import Pokemon from './Pokemon'
 
 const Pokedex = ({ pokemon, page, setPage, total }) => {

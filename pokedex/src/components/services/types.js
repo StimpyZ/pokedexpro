@@ -19,3 +19,16 @@ export const typeColors = {
   fairy: '#EE99AC',
   default: '#2A1A1F'
 }
+
+export const getTypeColor = (type) => {
+  return Object.hasOwnProperty.call(typeColors, type) ? typeColors[type] : typeColors.default
+}
+export const getImgBackground = (pokemon) => {
+  const typeColor = getTypeColor(pokemon.types[0].type.name)
+  return { backgroundColor: typeColor }
+}
+
+export const getColorType = (pokemon) => {
+  const typeColor = getTypeColor(pokemon.types[0].type.name)
+  return { color: typeColor }
+}

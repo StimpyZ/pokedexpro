@@ -1,7 +1,7 @@
 import React from 'react'
-import './css/pokemon.css'
+import '../../../components/css/pokemon.css'
 import { Link } from 'react-router-dom'
-import { typeColors } from './services/types'
+import { typeColors } from '../../../components/services/types'
 
 const Pokemon = ({ pokemon }) => {
   const getTypeColor = (type) => {

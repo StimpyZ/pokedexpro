@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './css/searchbarPoke.css'
+import '../../../components/css/searchbarPoke.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 

@@ -1,2 +1,2 @@
-export * from './HomePage'
-export * from './PokemonPage'
+export * from './HomePage/HomePage'
+export * from './PokePage/PokemonPage'

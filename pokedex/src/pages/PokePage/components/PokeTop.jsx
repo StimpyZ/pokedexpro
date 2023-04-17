@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import imgBackground from '../assets/pokeball-fondo-detail.png'
+import imgBackground from '../../../assets/pokeball-fondo-detail.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { getImgBackground } from './services/types'
+import { getImgBackground } from '../../../components/services/types'
 
 const PokeTop = ({ pokemon }) => {
   return (

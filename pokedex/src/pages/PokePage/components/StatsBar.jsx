@@ -1,6 +1,6 @@
 import React from 'react'
-import './css/statsPokemon.css'
-import { typeColors } from './services/types'
+import '../../../components/css/statsPokemon.css'
+import { typeColors } from '../../../components/services/types'
 
 const PokemonStats = ({ stats, type }) => {
   const statNames = ['HP', 'ATK', 'DEF', 'SATK', 'SDEF', 'SPD']

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import Pokedex from '../components/Pokedex'
+import Pokedex from './components/Pokedex'
 import {
   getPokemonDataAPI,
   getPokemonsData,
   pokemonFetchAPI
-} from '../components/services/getAllPokemons'
-import pokeNotFound from '../assets/pokeNotFound.png'
-import SearchbarPokemon from '../components/SearchBar'
-import Loading from '../components/Loading'
-import FooterStimp from '../components/footer'
+} from '../../components/services/getAllPokemons'
+import pokeNotFound from '../../assets/pokeNotFound.png'
+import SearchbarPokemon from './components/SearchBar'
+import Loading from '../../components/Loading'
+import FooterStimp from '../../components/footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 

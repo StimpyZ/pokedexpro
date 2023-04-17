@@ -2,11 +2,11 @@
   height: 100%;
   width: 100%;
   margin: 10px;
-  background-color: #d3d3d3;
+  background-color: #191c2d;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  color: black;
+  color: #f8f8f9;
 }
 
 .pokemon-card-container:hover {

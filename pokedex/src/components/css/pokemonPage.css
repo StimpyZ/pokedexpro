@@ -4,7 +4,7 @@ main {
 }
 
 .pokemon-card-detailed {
-  max-width: 500px;
+  max-width: 520px;
   height: 100%;
   margin: auto;
   padding: 5px;
@@ -30,7 +30,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .top-info p {
@@ -50,10 +50,11 @@ main {
   font-size: 2.5rem;
   font-weight: 600;
   color: white;
+  margin: 0;
 }
 
 #poke-id {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-right: 20px;
   color: white;
@@ -72,6 +73,7 @@ main {
   height: 250px;
   max-width: 300px;
   z-index: 10000;
+  top: 30px;
 }
 
 .poke-info {
@@ -79,23 +81,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
   background-color: #ffffff;
   width: 100%;
   color: black;
   border-radius: 10px;
   min-height: 690px;
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
   gap: 15px;
-  z-index: 1000;
-}
-
-.poke-type-detail1 {
-  display: flex;
-  gap: 5px;
-  align-content: center;
-  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .pokemon-type {
@@ -119,13 +113,11 @@ main {
   line-height: 1.7;
 }
 
-.pokeball-bg-detail {
-  width: 250px;
-  height: auto;
-  position: relative;
+.container-img-detail {
+  position: absolute;
+  right: 35px;
+  top: 35px;
   z-index: 1;
-  opacity: 0.3;
-  bottom: 70px;
 }
 
 .poke-type-detail {
@@ -133,11 +125,34 @@ main {
   gap: 5px;
 }
 
+.pokeball-bg-detail {
+  width: 250px;
+  height: auto;
+  opacity: 0.3;
+}
+
+.poke-type-detail1 {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 5px;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.poke-type-detail1 p {
+  max-height: 37px;
+}
+
 .flex-weak {
   display: flex;
-  width: 100%;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 420px) {
+  .name-back h1 {
+    font-size: 1.8rem;
+  }
 }

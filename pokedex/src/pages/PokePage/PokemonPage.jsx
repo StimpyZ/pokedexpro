@@ -8,7 +8,7 @@ import PokeInfo from './components/PokeInfo'
 
 export const PokemonPage = () => {
   const [loading, setLoading] = useState(true)
-  const [pokemon, setPokemon] = useState({})
+  const [pokemon, setPokemon] = useState([])
 
   const { id } = useParams()
 

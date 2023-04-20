@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getPokemonById } from '../../components/services/getAllPokemons'
 import '../../components/css/pokemonPage.css'
 import Loading from '../../components/Loading'
@@ -11,6 +11,7 @@ export const PokemonPage = () => {
   const [pokemon, setPokemon] = useState([])
 
   const { id } = useParams()
+  const navigate = useNavigate()
 
   const getPokemon = async (id) => {
     setLoading(true)
@@ -20,8 +21,13 @@ export const PokemonPage = () => {
   }
 
   useEffect(() => {
-    getPokemon(id)
-  }, [])
+    const parsedId = parseInt(id)
+    if (isNaN(parsedId) || parsedId <= 0) {
+      navigate('/error')
+    } else {
+      getPokemon(parsedId)
+    }
+  }, [id, navigate])
 
   return (
     <main>

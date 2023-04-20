@@ -11,7 +11,8 @@ const SearchbarPokemon = ({ search }) => {
     if (e.target.value.length === 0) search(null)
   }
 
-  const searchPokemonData = async () => {
+  const searchPokemonData = async (e) => {
+    e.preventDefault()
     search(pokemonSearch)
   }
 
@@ -24,7 +25,7 @@ const SearchbarPokemon = ({ search }) => {
           </a>
         </nav>
       </header>
-      <div className='seacrh-input-container'>
+      <form className='seacrh-input-container' onSubmit={searchPokemonData}>
         <input
           className='search-input'
           type='text'
@@ -34,10 +35,10 @@ const SearchbarPokemon = ({ search }) => {
         />
         <button
           className='search-button'
-          onClick={searchPokemonData}
+          type='submit'
         ><FontAwesomeIcon icon={faSearch} />
         </button>
-      </div>
+      </form>
     </div>
   )
 }

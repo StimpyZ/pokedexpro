@@ -11,10 +11,15 @@ import Loading from '../../components/Loading'
 import FooterStimp from '../../components/footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export const HomePage = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+  const searchParams = new URLSearchParams(location.search)
+
   const [pokemons, setPokemons] = useState([])
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState(parseInt(searchParams.get('page')) || 0)
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
   const [noPokemon, setNoPokemon] = useState(false)
@@ -35,8 +40,9 @@ export const HomePage = () => {
   }
 
   useEffect(() => {
+    navigate(`?page=${page}`)
     getPokemons()
-  }, [page])
+  }, [page, navigate])
 
   const searchPokemon = async (pokemonName) => {
     if (!pokemonName) return getPokemons()

@@ -9,7 +9,7 @@ const Pokedex = ({ pokemon, page, setPage, total }) => {
   }
 
   const nextPage = () => {
-    const nextPage = Math.min(page + 1, total)
+    const nextPage = Math.min(page + 1, total - 1)
     setPage(nextPage)
   }
 

@@ -1,16 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import imgBackground from '../../../assets/pokeball-fondo-detail.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { getImgBackground } from '../../../components/services/types'
 
 const PokeTop = ({ pokemon }) => {
+  const navigate = useNavigate()
+
+  const goBack = () => {
+    navigate(-1)
+  }
   return (
     <div className='poke-top-container' style={getImgBackground(pokemon)}>
       <div className='top-info'>
         <div className='name-back'>
-          <Link className='back' to='HomePage'>
+          <Link className='back' onClick={goBack}>
             <FontAwesomeIcon
               icon={faArrowLeft}
             />

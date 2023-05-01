@@ -1,3 +1,7 @@
+.container-grid {
+  min-height: 100vh;
+}
+
 
 .pokemon-container-grid {
   max-width: 1200px;

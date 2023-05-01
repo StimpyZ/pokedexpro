@@ -30,8 +30,9 @@ const Pokedex = ({ pokemon, page, setPage, total }) => {
         leftLastPage={firstPage}
         rightLastPage={finalPage}
       />
-      <div className='pokemon-container-grid'>
-        {
+      <div className='container-grid'>
+        <div className='pokemon-container-grid'>
+          {
           pokemon.map((pokemon) => {
             return (
               <Pokemon
@@ -41,6 +42,7 @@ const Pokedex = ({ pokemon, page, setPage, total }) => {
             )
           })
         }
+        </div>
       </div>
     </div>
   )
